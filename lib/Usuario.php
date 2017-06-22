@@ -10,6 +10,31 @@ class Usuario{
         $this->clave=$clave;
     }
     
+    function AgregarUsuario(){
+        $oConn=new Conexion();
+
+        if ($oConn->Conectar()) {
+            $db = $oConn->objconn;
+        } else {
+            return false;
+        }
+        
+        $sql="INSERT INTO usuario VALUES ()";
+        
+        //$sql="SELECT * FROM usuario WHERE nombreUsuario='$this->nombre'";
+        
+        $resultado=$db->query($sql);
+               
+        if ($resultado->num_rows >= 1) {
+            return true;
+        } else {
+            return false;
+        }
+         
+ 
+        
+    }
+    
     function VerificaUsuario(){
         $oConn=new Conexion();
         
