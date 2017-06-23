@@ -3,7 +3,7 @@
 include '../librerias.php';
 
 
-$oUsu=new Usuario($_REQUEST["nombreUsuario"],$_REQUEST["password"]);
+$oUsu=new Usuario($_REQUEST["nombre"],$_REQUEST["nombreUsuario"],$_REQUEST["password"]);
 
 if ($oUsu->VerificaLocal()) {
     echo "Todo bien";

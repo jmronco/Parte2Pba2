@@ -1,36 +1,37 @@
 <?php
 class Usuario{
     
-    var $idusuario;
+    var $nombreUsuario;
     var $nombre;
     var $clave;
     
-    function __construct($usu="",$clave=""){
+    function __construct($usu="",$nomUsu="",$clave=""){
+        $this->nombreUsuario=$nomUsu;
         $this->nombre=$usu;
         $this->clave=$clave;
     }
     
     function AgregarUsuario(){
         $oConn=new Conexion();
-
+        
         if ($oConn->Conectar()) {
             $db = $oConn->objconn;
         } else {
             return false;
         }
         
-        $sql="INSERT INTO usuario VALUES ()";
+        $sql="INSERT INTO usuario (nombre,nombreUsuario,password) VALUES ('$this->nombre','$this->nombreUsuario','$this->clave')";
         
-        //$sql="SELECT * FROM usuario WHERE nombreUsuario='$this->nombre'";
+        $db->query($sql);
         
-        $resultado=$db->query($sql);
-               
+        //$resultado=$db->query($sql);
+        /*       
         if ($resultado->num_rows >= 1) {
             return true;
         } else {
             return false;
         }
-         
+        */ 
  
         
     }
@@ -77,10 +78,10 @@ class Usuario{
     }
     
     function VerificaLocal(){
-        $usu="";
-        $key="";
+        $usu="scalderon";
+        $key="12345";
         
-        if ($this->nombre == $usu && $this->clave == $key) {
+        if ($this->nombreUsuario == $usu && $this->clave == $key) {
             return true;
         } else {
             return false;
