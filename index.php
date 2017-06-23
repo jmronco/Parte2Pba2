@@ -1,5 +1,10 @@
 <!DOCTYPE html>
+<?php
+    include 'constantes.php';
+    include PATH.'/lib/Conexion.php';
+    include PATH.'/lib/Usuario.php';
 
+?>
 <html>
     <head>
         <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
@@ -13,6 +18,13 @@
             <input id="enviar" type="button" onclick="" value="Enviar"> 
             <div id="mensaje"></div>
         </form>
+        <?php
+            $usu= new Usuario("Sebastian","scalderon","12345");
+            $usu->AgregarUsuario();
+                
+            
+            
+        ?>
 
     </body>
     <script>
