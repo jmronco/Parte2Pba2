@@ -41,7 +41,7 @@ class Usuario{
             return false;
         }
 
-        $sql="SELECT * FROM usuario WHERE nombreUsuario='$this->nombre'";
+        $sql="SELECT * FROM usuario WHERE nombreUsuario='$this->nombreUsuario'";
         
         $resultado=$db->query($sql);
                
