@@ -15,35 +15,21 @@ class Usuario{
         $oConn=new Conexion();
         
         if ($oConn->Conectar()) {
-            $db = $oConn->objconn
-;        } else {
+            $db = $oConn->objconn; 
+        } else { 
             return false;
         }
         
-        $sql1="Select nombre "
-                . "from usuario "
-                . "where nombreUsuario = '$this->nombreUsuario';";
-        
-        $resultado1 = mysqli_query($db, $sql1);
-        
-        if ($this->nombre === $resultado1){
+        if ($this->VerificaUsuario()){
             return false;   
-        }
-        
-        $sql="INSERT INTO usuario (nombre,nombreUsuario,password) VALUES ('$this->nombre','$this->nombreUsuario','$this->clave')";
-        
-        $db->query($sql);
-        
-        $resultado=$db->query($sql);
-              
-        if ($resultado->num_rows >= 1) {
+        }  
+        else
+        {
+            $sql="INSERT INTO usuario (nombre,nombreUsuario,password) VALUES ('$this->nombre','$this->nombreUsuario','$this->clave')";
+            $db->query($sql);
             return true;
-        } else {
-            return false;
         }
-        
  
-        
     }
     
     function VerificaUsuario(){
