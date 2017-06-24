@@ -20,9 +20,11 @@
             <div id="mensaje"></div>
         </form>
         <?php
-            //$usu= new Usuario("Sebastian","scalderon","12345");
-            //$usu->AgregarUsuario();
-                
+        
+        /*
+            $usu= new Usuario("Sebastian","scalderon","12345");
+            $usu->AgregarUsuario();
+        */       
             
             
         ?>
