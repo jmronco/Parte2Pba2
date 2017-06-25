@@ -40,6 +40,25 @@ class Producto {
         }
     }
     
+    function EliminarProducto(Producto $producto){
+        $oConn=new Conexion();
+        
+        if ($oConn->Conectar()) {
+            $db = $oConn->objconn;
+        } else {
+            return false;
+        }
+        
+        if($this->VerificaProducto())
+        {    
+            $sql="DELETE FROM producto WHERE nombre='$producto->nombre'";
+            $db->query($sql);
+            return true;
+        }else {return false;}
+        
+                           
+    }
+    
     function VerificaProducto(){
         $oConn=new Conexion();
         
