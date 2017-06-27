@@ -52,9 +52,8 @@ class Producto {
             $sql="DELETE FROM producto WHERE nombre='$producto->nombre'";
             $db->query($sql);
             return true;
-        }else {return false;}
-        
-                           
+        }
+        return false;       
     }
     
     function VerificaProducto(){
@@ -72,8 +71,7 @@ class Producto {
                
         if ($resultado->num_rows >= 1) {
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
 }
