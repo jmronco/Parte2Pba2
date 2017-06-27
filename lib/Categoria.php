@@ -40,7 +40,6 @@ class Categoria {
             $db->query($sql);
             return true;
         }
-        
         return false;
         
                            
