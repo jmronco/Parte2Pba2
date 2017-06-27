@@ -5,6 +5,7 @@ class Producto {
     var $nombre;
     var $nombreImagen;
     var $ubicacionImagen;
+    var $id;
     
     function __construct($nom="",$nomImg="",$ubiImg=""){
         $this->nombre=$nom;
@@ -15,7 +16,7 @@ class Producto {
     function __construct2($nom=""){
         $this->nombre=$nom;   
     }
-            
+           
     function AgregarProducto(){
         $oConn=new Conexion();
         
@@ -32,12 +33,9 @@ class Producto {
             $db->query($sql);
             return true;
         }
-        else
-        {
-            $sql="INSERT INTO producto (nombre) VALUES ('$this->nombre')";
-            $db->query($sql);
-            return true;
-        }
+        $sql="INSERT INTO producto (nombre) VALUES ('$this->nombre')";
+        $db->query($sql);
+        return true;
     }
     
     function EliminarProducto(Producto $producto){
