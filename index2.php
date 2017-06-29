@@ -19,9 +19,9 @@ and open the template in the editor.
 		<div class="wrapp">
 			<div class="logo">
                             <a href="#"><img src="disenio/img/logo-header.svg" img width="200px" alt="solostocks.com"></a>
-                            <?php 
-                            echo "Página Principal Solo Stocks"; 
-                            ?>
+                            <center><h4><?php 
+                            echo "Página Principal"; 
+                            ?></h4></center>
                             
 			</div>
 				<ul>
@@ -29,6 +29,8 @@ and open the template in the editor.
                                     <div><a href="index.php">Inicio</a></div><br>
                                     <div><input type="submit" value="Acceso a Cuenta" 
                                                 onclick="location='disenio/acceso.php'"</input></div><br>
+                                                <div><input type="submit" value="Crear Cuenta" 
+                                                onclick="location='disenio/crearUsuario.php'"</input></div><br>
                                                 <div><a href="disenio/carroDeCompra.php">Carro de Compra</a></div>
                                             <select>
                                                 <optgroup label="Categorías">
@@ -47,7 +49,7 @@ and open the template in the editor.
                                 </ul>
 		</div>
             <div></div><button><a  href="disenio/verProductos.php">Ver Productos</a></button>
-            <button><a  href="disenio/verCategorias.php">Ver Categorías</a></button>
+            <button class="btnVCat">Ver Categorías</button>
 	</header>
                             
     </body>

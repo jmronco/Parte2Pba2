@@ -4,11 +4,10 @@
         <title>Categoría</title>
     </head>
     <body>
-        <form method="POST" action="../IngresoCategoria.php">
-            <div><label>Nombre Categoría</label><input type="text" name="nombreCategoria"></div>
-            
-            <?php include 'verCategorias.php' ?>
-            <input id="enviar" type="button" onclick="" value="Enviar"> 
+        <form method="POST" action="">
+            <div><label>Nombre Categoría</label><br><input type="text" name="nombreCategoria"></div>
+            <div><label>Código Categoría</label><br><input type="number" name="idCategoria"></div>
+            <input type="submit" value="Agregar Categoría">
         </form>
     </body>
 </html>

@@ -1,4 +1,13 @@
-<select>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ventana de Productos</title>
+    <center><h3><?php echo "Ventana de Productos";?></h3><center>
+    </head>
+    <body>
+        </head>
+
+<center><select>
   <optgroup label="Productos">
     <option value="producto1.1">Producto 1.1</option>
     <option value="producto1.2">Producto 1.2</option>
@@ -26,5 +35,7 @@
     <option value="producto5.4">Producto 5.4</option>
     <option value="producto5.5">Producto 5.5</option>
   </optgroup>
-</select>
+    </select></center>
+
+
 

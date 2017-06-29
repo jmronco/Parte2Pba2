@@ -1,38 +1,55 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Inicio Sesión</title>
+        <title>Inicio Sesión</title><br>
     </head>
     <body>
-        <form method="POST" action="../IniciarSesion.php">
-            <div><label>Nombre</label><input type="text" name="nombre"></div>
-            <div><label>Usuario</label><input type="text" name="nombreUsuario"></div>
-            <div><label>Clave</label><input type="password" name="password"></div>
-            <input id="enviar" type="button" onclick="" value="Enviar"> 
+        <form method="POST" action="">
+            <div><label>Usuario</label><br><input type="text" name="usuario"></div>
+            <div><label>Clave</label><br><input type="password" name="clave"></div>
+            <input type="submit" value="Ingresar Datos">
+            
+            <?php
+if(isset($_POST["submit"])){
+
+if(!empty($_POST['usuario']) && !empty($_POST['clave'])) {
+	$user=$_POST['usuario'];
+	$pass=$_POST['clave'];
+	
+        var_dump('Usuario');
+
+
+	$mysqli = new mysqli('localhost', 'root', 'avaras08', 'bdd');
+	$sql= ("SELECT * FROM usuario WHERE usuario='".$user."' AND clave='".$pass."'");
+	
+	$result = $mysqli->query($sql);
+
+	
+	$row = $result->fetch_array(MYSQLI_ASSOC);
+
+	
+
+	if ($result != NULL)
+	{
+
+	if($user == $row['usuario'] && $pass == $row['clave'])
+	{
+
+	session_start();
+	$_SESSION['sess_user']=$user;
+
+	/* Redirect browser */
+	header("Location: index.php");
+	}
+	} else {
+	echo "La Clave o Usuario es invalida!";
+	}
+
+} else {
+	echo "Todos los campos son requeridos!";
+}
+}
+?>
         </form>
     </body>
-    <script>
-    $(document).ready(function(){
-            $("#enviar").click(function(){
-        
-                if ($("#nombreUsuario").val()!=="" && $("#password").val()!=="" && $("#nombre").val()!==""){
-                    ///*$("#frmusuario").submit();
-                        $.ajax({url:"/controlador/ValidaUsuario.php"
-                            ,type:'post'
-                            ,data:{'nombreUsuario':$("#nombreUsuario").val(),
-                                'password':$("#password").val(),
-                                'nombre':$("#nombre").val()
-                                }
-                            ,success:function(resultado){
-                                $("#mensaje").html(resultado);
-                            }
-                        });
-                    }
-                else
-                    alert("Debe Agregar el usuario y clave");
-            });
-     });
-     </script>
-    
-    
 </html>
