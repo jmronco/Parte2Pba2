@@ -8,7 +8,7 @@
             <div><label>Número Pedido</label><input type="number" name="numPedido"></div>
             <div><label>Cantidad Productos</label><input type="number" name="cantidadProductos"></div>
             <div><label>Total Pedido</label><input type="number" name="totalPedido"></div>
-            <input type="submit" value="Ingresar Datos">
+            <input id="enviar" type="button" onclick="" value="Enviar"> 
         </form>
     </body>
 </html>

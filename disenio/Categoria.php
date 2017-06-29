@@ -8,7 +8,7 @@
             <div><label>Nombre Categoría</label><input type="text" name="nombreCategoria"></div>
             
             <?php include 'verCategorias.php' ?>
-            <input type="submit" value="Agregar Categoría">
+            <input id="enviar" type="button" onclick="" value="Enviar"> 
         </form>
     </body>
 </html>
