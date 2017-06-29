@@ -1,8 +1,25 @@
-@import url(http://fonts.googleapis.com/css?family=Ubuntu);
-body {
-    background-color: lightblue;
-    font-family:Ubuntu;
+
+
+header{
+    margin:auto;
+    margin-top: 10px;
+    width: 960px;
+    height: 800px;
+    background-color: white;
 }
+
+body{
+    font-family: Ubuntu;
+    margin:auto;
+    margin-top: 0px;
+    width: 1000px;
+    height: 100px;
+    background-color: lightblue;
+}
+
+
+
+
 
 h1 {
     color: white;
@@ -15,15 +32,15 @@ p {
 }
 
 a:link {
-    color: blue;
+    color: green;
 }
 
 /* visited link*/
 a:visited {
-    color: white;
+    color: navy;
 }
 
-/* mouse over link*/ 
+/* mouse over link*/
 a:hover {
     color: orange;
 }
@@ -32,6 +49,21 @@ a:hover {
 a:active {
     color: blue;
 }
+
+#myInput {
+    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+
+
+
+
 
 
 

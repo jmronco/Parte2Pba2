@@ -1,12 +1,9 @@
-<?php
-    include "../constantes.php";
-    include PATH.'/lib/Conexion.php';
-    include PATH.'/lib/Usuario.php';
-?>
 <html>
+    
     <head>
         <meta charset="UTF-8">
         <title>Producto</title>
+        
     </head>
     <body>
         <form method="POST" action="../AgregarProducto.php">
@@ -20,7 +17,6 @@
         </form>
     </body>
 </html>
-
-/*Falta agregar nombre de imagen, ubicación imagen*/
-
-<div><img src="http://mkt.ssstatic.com/home/img/tematicas/tematica-recambios-vehiculos-1.jpg" alt="solostocks.com" ></img></div>
+<?php
+/*Falta agregar nombre de imagen, ubicación imagen
+<div><img src="http://mkt.ssstatic.com/home/img/tematicas/tematica-recambios-vehiculos-1.jpg" alt="solostocks.com" ></img></div>*/
