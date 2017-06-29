@@ -7,14 +7,16 @@
     </head>
     <body>
         <form method="POST" action="../AgregarProducto.php">
-            <div><label>Nombre Producto</label><input type="text" name="nombrePdcto"></div>
-            <div><label>Código Producto</label><input type="number" name="idPdcto"></div>
-            <div><label>Categoría de Producto</label><input type="text" name="categoriaPdcto"></div>
-            <div><label>Cantidad de Producto</label><input type="number" name="cantPdcto"></div>
-            <div><label>Precio de Producto</label><input type="number" name="precioPdcto"></div>
-            <div><label>Proveedor</label><input type="text" name="idProveedor"></div>
+            <div><label>Nombre Producto      :</label><input type="text" name="nombrePdcto"></div>
+            <div><label>Categoría de Producto:</label><input type="text" name="categoriaPdcto"></div>
+            <div><label>Cantidad de Producto :</label><input type="number" name="cantPdcto"></div>
+            <div><label>Precio de Producto   :</label><input type="number" name="precioPdcto"></div>
+            <div><label>Proveedor            :</label><input type="text" name="idProveedor"></div>
             <input type="submit" value="Agregar Producto">
         </form>
+        
+        <?php include 'verProductos.php' ?>
+        
     </body>
 </html>
 <?php

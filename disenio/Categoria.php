@@ -6,7 +6,8 @@
     <body>
         <form method="POST" action="../IngresoCategoria.php">
             <div><label>Nombre Categoría</label><input type="text" name="nombreCategoria"></div>
-            <div><label>Código Categoría</label><input type="number" name="idCategoria"></div>
+            
+            <?php include 'verCategorias.php' ?>
             <input type="submit" value="Agregar Categoría">
         </form>
     </body>
