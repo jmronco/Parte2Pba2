@@ -24,6 +24,7 @@ and open the template in the editor.
                                     <div><a href="disenio/Categoria.php"    >Categoría</a></div>
                                     <div><a href="disenio/Producto.php"     >Producto</a></div>
                                     <div><a href="disenio/CarroDeCompra.php">Carro de Compra</a></div>
+                                    <div><a href="disenio/CarroDeCompra_1.php">Carro de Compra</a></div>
                                     <div><button >Buscar</button></div>
                                 </ul>
 		</div>

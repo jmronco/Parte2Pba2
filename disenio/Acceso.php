@@ -17,7 +17,7 @@
         
                 if ($("#nombreUsuario").val()!=="" && $("#password").val()!=="" && $("#nombre").val()!==""){
                     ///*$("#frmusuario").submit();
-                        $.ajax({url:"controlador/ValidaUsuario.php"
+                        $.ajax({url:"/controlador/ValidaUsuario.php"
                             ,type:'post'
                             ,data:{'nombreUsuario':$("#nombreUsuario").val(),
                                 'password':$("#password").val(),
