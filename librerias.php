@@ -10,7 +10,3 @@ include PATH.'/disenio/CarroDeCompra.php';
 include PATH.'/disenio/Categoria.php';
 include PATH.'/disenio/Producto.php';
 include PATH.'/disenio/CSS/Estilos.css';
-
-
-
-

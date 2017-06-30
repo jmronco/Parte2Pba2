@@ -8,7 +8,6 @@ class Categoria {
   
     }
            
-    
     function AgregarCategoria(){
         $oConn=new Conexion();
         
